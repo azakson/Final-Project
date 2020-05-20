@@ -15,6 +15,7 @@
 		582FA6C124731E9300391ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582FA6BF24731E9300391ED0 /* LaunchScreen.storyboard */; };
 		582FA6CC24731E9400391ED0 /* Final_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FA6CB24731E9400391ED0 /* Final_ProjectTests.swift */; };
 		582FA6D724731E9400391ED0 /* Final_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FA6D624731E9400391ED0 /* Final_ProjectUITests.swift */; };
+		582FA7252474D1CC00391ED0 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FA7242474D1CC00391ED0 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		582FA6D224731E9400391ED0 /* Final ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		582FA6D624731E9400391ED0 /* Final_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_ProjectUITests.swift; sourceTree = "<group>"; };
 		582FA6D824731E9400391ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582FA7242474D1CC00391ED0 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				582FA6B424731E9100391ED0 /* AppDelegate.swift */,
 				582FA6B624731E9100391ED0 /* SceneDelegate.swift */,
 				582FA6B824731E9100391ED0 /* ViewController.swift */,
+				582FA7242474D1CC00391ED0 /* LocationViewController.swift */,
 				582FA6BA24731E9100391ED0 /* Main.storyboard */,
 				582FA6BD24731E9300391ED0 /* Assets.xcassets */,
 				582FA6BF24731E9300391ED0 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				582FA6B924731E9100391ED0 /* ViewController.swift in Sources */,
 				582FA6B524731E9100391ED0 /* AppDelegate.swift in Sources */,
 				582FA6B724731E9100391ED0 /* SceneDelegate.swift in Sources */,
+				582FA7252474D1CC00391ED0 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
