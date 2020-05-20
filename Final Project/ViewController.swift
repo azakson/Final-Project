@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -59,6 +60,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if annotation is MKUserLocation {
             return nil
         }
+        
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinView")
@@ -68,14 +70,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             pinView?.annotation = annotation
         }
         return pinView
+        
     }
-    
+   
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "ShowLocationDetailsSeque", sender: nil)
+    }
+   
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         for mapItem in mapItems {
             if mapItem.placemark.coordinate.latitude == view.annotation?.coordinate.latitude &&
                 mapItem.placemark.coordinate.longitude == view.annotation?.coordinate.longitude {
                 selectedMapItem = mapItem
             }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LocationViewController {
+            destination.selectedMapItem = selectedMapItem
         }
     }
 }

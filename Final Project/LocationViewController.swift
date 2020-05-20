@@ -7,24 +7,38 @@
 //
 
 import UIKit
+import MapKit
+import SafariServices
 
-class LocationViewController: ViewController {
-
+class LocationViewController: UIViewController {
+    
+    var selectedMapItem = MKMapItem()
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(selectedMapItem.name!)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        nameLabel.text = selectedMapItem.placemark.name
+        var address = selectedMapItem.placemark.subThoroughfare! + ""
+        address += selectedMapItem.placemark.thoroughfare! + "\n"
+        address += selectedMapItem.placemark.locality! + ", "
+        address += selectedMapItem.placemark.administrativeArea! + " "
+        address += selectedMapItem.placemark.postalCode!
+        addressLabel.text = address
+        phoneLabel.text = selectedMapItem.phoneNumber
+    }
+    @IBAction func OnDirectionsButtonTapped(_ sender: UIButton) {
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        MKMapItem.openMaps(with: [selectedMapItem], launchOptions: launchOptions)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onWebsiteButtonTapped(_ sender: UIButton) {
+        if let url = selectedMapItem.url {
+            present(SFSafariViewController(url: url), animated: true)
+        }
     }
-    */
-
 }
