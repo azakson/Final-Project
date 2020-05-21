@@ -78,7 +78,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tK9-g8-vsF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,15 +87,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8si-mj-q8R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s9-kN-Qvk">
-                                <rect key="frame" x="172" y="659" width="70" height="38"/>
+                                <rect key="frame" x="142" y="659" width="130" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="fWO-4C-SbH"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Directions"/>
                                 <connections>
                                     <action selector="OnDirectionsButtonTapped:" destination="4wQ-tn-7FN" eventType="touchUpInside" id="Rw3-bM-zDw"/>
@@ -103,10 +104,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-o1-fCx">
-                                <rect key="frame" x="179" y="759" width="56" height="30"/>
+                                <rect key="frame" x="154.5" y="759" width="105" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xt8-zn-hsa"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Website"/>
                                 <connections>
                                     <action selector="onWebsiteButtonTapped:" destination="4wQ-tn-7FN" eventType="touchUpInside" id="83X-rn-87b"/>
@@ -114,7 +116,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2T-5u-HQc">
                                 <rect key="frame" x="107" y="316" width="200" height="150"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
