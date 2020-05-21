@@ -27,6 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.showsUserLocation = true
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+        mapView.delegate = self
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -74,7 +75,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        performSegue(withIdentifier: "ShowLocationDetailsSeque", sender: nil)
+        performSegue(withIdentifier: "ShowLocationDetailsSegue", sender: nil)
     }
    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {

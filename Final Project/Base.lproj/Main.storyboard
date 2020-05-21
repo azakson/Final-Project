@@ -87,7 +87,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8si-mj-q8R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -100,7 +100,6 @@
                                 <state key="normal" title="Directions"/>
                                 <connections>
                                     <action selector="OnDirectionsButtonTapped:" destination="4wQ-tn-7FN" eventType="touchUpInside" id="Rw3-bM-zDw"/>
-                                    <action selector="onDirectionsButtonTapped:" destination="4wQ-tn-7FN" eventType="touchUpInside" id="Tfb-j0-Sa4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-o1-fCx">
